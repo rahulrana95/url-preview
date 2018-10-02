@@ -7,7 +7,7 @@ const requestImageSize = require('request-image-size');
 
 exports.handler = (event, context, callback) => {
 
-    const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36';
+    const userAgent = window.navigator.userAgent;
     let url = event.url;
     
     if(event.url.substr(0,6) === 'http://' || event.url.substr(0,7) === 'https://') {
